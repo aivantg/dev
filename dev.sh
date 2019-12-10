@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 set -o pipefail
-export DEV_HOST=${DEV_HOST:=ssh.aivant.me}
-export DEV_USER=${DEV_USER:=root}
 export DEV_CONFIG_PATH=${DEV_CONFIG_PATH:=/Users/aivant/Development/.dev}
 export DEV_FOLDER_PATH=${DEV_FOLDER_PATH:=/Users/aivant/Development}
 source "$DEV_CONFIG_PATH/dev-completion.sh"
