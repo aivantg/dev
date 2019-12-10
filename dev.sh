@@ -11,7 +11,7 @@ for f in $DEV_CONFIG_PATH/plugins/*.sh; do source $f; done
 dev() {
   IFS=':' read -ra PARAMS <<< "$1"
   declare APP="${PARAMS[0]}" CMD="${PARAMS[1]}"
-  declare -A apps=( [vbox]=1 [cmd]=1 [env]=1 [server]=1 [app]=1 [ssh]=1 [alias]=1 [config]=1 [profile]=1 ) #Define what apps exist
+  declare -A apps=([cmd]=1 [env]=1 [ssh]=1 [alias]=1 [config]=1 [profile]=1 ) #Define what apps exist
   if [[ -n $APP && -n "${apps[$APP]}" ]]; then
     shift # Remove first app argument
     if [[ -n "$CMD" ]]; then
@@ -21,21 +21,5 @@ dev() {
     fi
   else
     dev-alias-cd $@
-  fi
-}
-
-devp() {
-  IFS=':' read -ra PARAMS <<< "$1"
-  declare APP="${PARAMS[0]}" CMD="${PARAMS[1]}"
-  declare -A apps=( [vbox]=1 [cmd]=1 [env]=1 [server]=1 [app]=1 [ssh]=1 [alias]=1 [config]=1 [profile]=1 ) #Define what apps exist
-  if [[ -n $APP && -n "${apps[$APP]}" ]]; then
-    shift # Remove first app argument
-    if [[ -n "$CMD" ]]; then
-      type dev-$APP-$CMD $@
-    else
-      type dev-$APP $@
-    fi
-  else
-    type dev-alias-cd $@
   fi
 }
