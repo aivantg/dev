@@ -9,7 +9,7 @@ To solve some of these problems and help me make my command line as powerful and
 
 ## Installation
 
-1. Clone this repository into a folder somewhere on your computer. It can be stored anywhere! 
+1. Clone this repository into a folder somewhere on your computer. It can be stored anywhere! (note, the folder name `.dev` is by default hidden on most operating systems since it starts with a "." Feel free to rename if you don't like this!)
 2. Open up `dev.sh` in a text editor
 3. Edit the value for `DEV_CONFIG_PATH` to be the folder that contains `dev.sh`
 4. Edit the value for `DEV_FOLDER_PATH` to be your "home" folder for all of your development projects.
