@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-dev-profile-atom() {
-  atom $HOME/.bash_profile
+dev-profile-code() {
+  code $HOME/.bash_profile
 }
 
 dev-profile-edit() {
